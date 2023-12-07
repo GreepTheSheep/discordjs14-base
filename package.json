@@ -10,7 +10,7 @@
         "dev": "nodemon src/bot.js"
     },
     "engines": {
-        "node": ">=16.6"
+        "node": ">=20"
     },
     "keywords": [
         "discord",
