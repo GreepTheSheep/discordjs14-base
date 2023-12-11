@@ -32,7 +32,7 @@ async function registerCommands(guildId, userId, commands) {
 
                         if (arg.choices && arg.choices.length > 0) {
                             arg.choices.forEach(choice => {
-                                if (choice) slashCommandOption.addChoice(choice.name, choice.value);
+                                if (choice != null) slashCommandOption.addChoices(choice);
                             });
                         }
 
@@ -51,7 +51,9 @@ async function registerCommands(guildId, userId, commands) {
                             .setRequired(arg.required);
 
                         if (arg.choices && arg.choices.length > 0) {
-                            arg.choices.forEach(choice => slashCommandOption.addChoice(choice.name, choice.value));
+                            arg.choices.forEach(choice => {
+                                if (choice != null) slashCommandOption.addChoices(choice);
+                            });
                         }
 
                         slashCommand.addNumberOption(slashCommandOption);
