@@ -64,7 +64,7 @@ exports.execute = async (interaction, commands) => {
         new MessageButton()
             .setURL('https://greep.gq')
             .setLabel('Link to a web page')
-            .setStyle('LINK')
+            .setStyle(ButtonStyle.Link)
     );
 
     // adds a select menu to the message in the second row
